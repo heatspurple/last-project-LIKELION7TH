@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+{% load staticfiles %}
+
+<link href="{% static 'home.css' %}"  rel="stylesheet">
+    
+
+<body>
+        <header class="w3-display-container w3-content w3-wide" style="max-width: 100%;" id="home" >
+                <img class="w3-image w3-opacity-min" src="https://cdn.pixabay.com/photo/2017/08/30/17/25/restaurant-2697945_1280.jpg" alt="restaurant" width="100%" height="400">
+                    <div class="w3-display-middle w3-center">
+                        <h1 class="w3-xxlarge w3-text-black">
+                            <p>
+                                <b>빠르고 간편한 맛집 검색</b>
+                                </p>
+                                <p class="w3-margin-top">
+                                <span class="w3-padding w3-black w3-opacity-min w3-text-white">
+                                <b>궁동에서</b>
+                                </span>
+                            </p>
+                        </h1>
+                    </div>        
+                </header>
+    
+    <!-- page main -->
+    <main class="w3-padding w3-content" style="max-width: 1500px;">
+
+
+         <!-- category section  -->
+        <div class="w3-container w3-padding-64" id="category">
+            <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-B612">Category</h1>
+        </div>
+
+        <div class="w3-row-padding">
+            <!-- 한식  -->
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">한식</div>
+                        <a href="{% url 'index_korean' %}">
+                            <img class="category w3-hover-opacity" src="https://cdn.pixabay.com/photo/2018/06/04/13/36/cold-noodles-3453218_1280.jpg" alt="Korean" style="width:99%">
+                        </a>
+                </div>
+            </div>
+
+             <!-- 일식  -->
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">일식</div>
+                    <a href="{% url 'index_japanese' %}">
+                        <img class="category w3-hover-opacity" src="https://cdn.pixabay.com/photo/2016/04/26/03/55/salmon-1353598_1280.jpg" alt="Japanese" style="width:99%">
+                    </a>
+                </div>
+            </div>
+
+            <!-- 양식  -->
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">양식</div>
+                        <a href="{% url 'index_western' %}">
+                            <img class="category w3-hover-opacity" src="https://cdn.pixabay.com/photo/2016/08/03/05/14/beef-1565904_1280.jpg" alt="western" style="width:99%">
+                        </a>
+                </div>
+            </div>
+
+             <!-- 중식  -->
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">중식</div>
+                        <a href="{% url 'index_chinese' %}">
+                            <img class="category w3-hover-opacity" src="https://cdn.pixabay.com/photo/2019/05/21/15/21/noodle-4219235_1280.jpg" alt="Chinese" style="width:99%">
+                        </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- about section -->
+        <div class="w3-container w3-padding-64 w3-margin-bottom" >
+            <a class="w3-B612 w3-border-bottom w3-border-light-grey w3-padding-16 review-redirect" href="{% url 'review_read' %}">Reviews</a>
+        </div>
+               
+           <!-- 자기소개 -->
+           <div class="container-fluid bg-1 text-center">
+                <h3 class="margin w3-B612"><b>Who are We?</b></h3>
+                <img src="https://cdn.pixabay.com/photo/2016/02/07/21/03/computer-1185626_1280.jpg" class="img-responsive" style="display:inline" alt="photo" width="350" height="350">
+                <br>
+                <div class="name  w3-B612">
+                    we're
+                    <div class="name-job">
+                        <ul class="name-job-list">
+                            <li>Likelion 7th members</li>
+                            <li>Creators</li>
+                            <li>Students</li>
+                            <li>Foodfighters</li>
+                            <li>Likelion 7th members</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    </main>
+</body>
+{% endblock %}
+</html>
